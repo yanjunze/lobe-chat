@@ -39,7 +39,7 @@ jobs:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
-      # 7. 压缩并上传（核心修改点：加入了 --archive=tgz）
+      # 7. 压缩并上传
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --prod --archive=tgz --token=${{ secrets.VERCEL_TOKEN }}
         env:
